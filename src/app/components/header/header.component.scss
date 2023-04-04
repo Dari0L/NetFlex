@@ -1,17 +1,27 @@
 .container{
   height: 3rem;
   display: grid;
-  grid-template-columns: 5rem auto 4rem 4rem;
+  grid-template-columns: 10rem auto 4rem 4rem;
   gap: 1rem;
-  align-content: center;
+  align-items: center;
   background-color: darkslateblue;
 
 }
 .container *{
-  color: white;
+
+
 }
 nav{
   display: flex;
   flex-direction: row;
   gap: 1rem;
+  align-items: center;
+}
+
+a:hover{
+  color: black;
+}
+a{
+  color: white;
+  text-decoration: none;
 }
