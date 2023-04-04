@@ -3,8 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
+
+import { PrimeNgModule } from './prime-ng/prime-ng.module';
 import { SliderComponent } from './components/slider/slider.component';
+import { HeaderComponent } from './components/header/header.component';
+
 import { DetailsFilmComponent } from './components/details-film/details-film.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ContentsPageComponent } from './pages/contents-page/contents-page.component';
@@ -14,17 +17,18 @@ import { FavoritesPageComponent } from './pages/favorites-page/favorites-page.co
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    SliderComponent,
     DetailsFilmComponent,
     HomePageComponent,
     ContentsPageComponent,
     SearchPageComponent,
-    FavoritesPageComponent
+    FavoritesPageComponent,
+    HeaderComponent,
+    SliderComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PrimeNgModule
   ],
   providers: [],
   bootstrap: [AppComponent]
