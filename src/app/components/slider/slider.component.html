@@ -1,1 +1,60 @@
-<p>slider works!</p>
+<!--
+<p-carousel [value]="movies" [numVisible]="3" [numScroll]="1" >
+  <ng-template let-movies pTemplate="item">
+      <div>
+          <div>
+              <div class="mb-3">
+                <img src="{{movies.src}}" [alt]="">
+              </div>
+
+          </div>
+      </div>
+  </ng-template>
+</p-carousel> -->
+
+<!-- <p-carousel [value]="movies" [numVisible]="5" [numScroll]="1" [responsiveOptions]="responsiveOptions">
+
+  <ng-template let-movies pTemplate="item">
+    <div>
+      <p-image src="{{movies.url}}" alt="Image" width="240"></p-image>
+    </div>
+    <div>
+      <h4 class="mb-1">{{ movies.nome }}</h4>
+    </div>
+    <h6 class="mt-0 mb-3">{{ movies.description }}</h6>
+
+</ng-template>
+
+</p-carousel> -->
+<div class="card">
+  <p-carousel [value]="movies" [numVisible]="3" [numScroll]="3" [circular]="false"
+    [responsiveOptions]="responsiveOptions">
+    <ng-template let-movies pTemplate="item">
+      <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+        <div class="mb-3 hoverToShow">
+          <img src="{{ movies.url }}" width="290px" [alt]="movies.nome" class="w-6 shadow-2 " />
+        </div>
+        <div class="row showDetails">
+          <div class="col d-flex flex-row-reverse">
+            <p-button type="button"  styleClass="p-button p-button-rounded" icon="pi pi-star"></p-button>
+          </div>
+          <div class="col-12 ">
+            <h4 class="mb-1">{{ movies.nome }}</h4>
+            <h6 class="mt-0 mb-3">{{movies.description }}</h6>
+          </div>
+        </div>
+
+
+
+
+
+
+          <!-- <p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)"></p-tag> -->
+          <div class="car-buttons mt-5">
+            <!-- <p-button type="button" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-star-fill"></p-button> -->
+          </div>
+
+      </div>
+    </ng-template>
+  </p-carousel>
+</div>
