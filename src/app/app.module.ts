@@ -16,7 +16,14 @@ import { FavoritesPageComponent } from './pages/favorites-page/favorites-page.co
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DetailsFilmComponent,
+    HomePageComponent,
+    ContentsPageComponent,
+    SearchPageComponent,
+    FavoritesPageComponent,
+    HeaderComponent,
+    SliderComponent,
   ],
   imports: [
     BrowserModule,
