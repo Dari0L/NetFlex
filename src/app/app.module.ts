@@ -13,6 +13,8 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ContentsPageComponent } from './pages/contents-page/contents-page.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { FavoritesPageComponent } from './pages/favorites-page/favorites-page.component';
+import { NavItemComponent } from './components/nav-item/nav-item.component';
+import { ContentsDetailPageComponent } from './pages/contents-detail-page/contents-detail-page.component';
 
 @NgModule({
   declarations: [
@@ -22,8 +24,11 @@ import { FavoritesPageComponent } from './pages/favorites-page/favorites-page.co
     ContentsPageComponent,
     SearchPageComponent,
     FavoritesPageComponent,
+    NavItemComponent,
+    ContentsDetailPageComponent,
     HeaderComponent,
     SliderComponent,
+
   ],
   imports: [
     BrowserModule,

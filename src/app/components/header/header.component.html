@@ -4,11 +4,16 @@
       <img src="assets/logoNetFlex.png" alt="logoNetFlex" width="90rem" height="40rem">
     </div>
     <nav>
-      <a href="">home</a>
-      <a href="">film</a>
-      <a href="">serie</a>
+      <ng-container *ngFor="let item of navItems">
+        <app-nav-item [item]="item"></app-nav-item>
+      </ng-container>
     </nav>
-    <a href=""><img src="assets/search.png" alt="" width="20px" height="20px"></a>
-    <a href="">profilo</a>
+    <a routerLink="search"><img src="assets/search.png" alt="" width="20px" height="20px"></a>
+    <div class="account">
+      <div class="label">profilo</div>
+      <div class="list"></div>
+    </div>
   </div>
 </header>
+
+
