@@ -1,4 +1,4 @@
-.container{
+.wrapper{
   height: 3rem;
   display: grid;
   grid-template-columns: 10rem auto 4rem 4rem;
@@ -7,10 +7,7 @@
   background-color: darkslateblue;
 
 }
-.container *{
 
-
-}
 nav{
   display: flex;
   flex-direction: row;
