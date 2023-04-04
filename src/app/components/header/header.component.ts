@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-
+  type item={
+    label:string,
+    path:string
+  }
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,4 +10,10 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  navItems:item[]=[
+    {label:'Home',path:''},
+    {label:'Film',path:'catalogo/film'},
+    {label:'Serie',path:'catalogo/serie'},
+    {label:'Documentari',path:'catalogo/doc'},
+    {label:'Spettacoli',path:'catalogo/spet'}]
 }
