@@ -15,6 +15,7 @@ import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { FavoritesPageComponent } from './pages/favorites-page/favorites-page.component';
 import { NavItemComponent } from './components/nav-item/nav-item.component';
 import { ContentsDetailPageComponent } from './pages/contents-detail-page/contents-detail-page.component';
+import { ProfiloComponent } from './components/profilo/profilo.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ContentsDetailPageComponent } from './pages/contents-detail-page/conten
     ContentsDetailPageComponent,
     HeaderComponent,
     SliderComponent,
+    ProfiloComponent,
 
   ],
   imports: [
