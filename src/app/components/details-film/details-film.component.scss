@@ -4,23 +4,7 @@
 }
 
 
-#attori {
-  //position: fixed;
-  //bottom: 0;
-  justify-content: center;
-  margin-top: 5rem;
-  font-size: 2rem;
-  color: #05445E;
-  border-radius: 100px;
-  background-color: #75E6DA;
-  border: 5px solid #05445E;
-  padding:40px;
-  width:80%;
-  margin:auto;
 
-
-
-}
 
 #layoutComplessivo {
   display: flex;
@@ -66,13 +50,13 @@
   margin-right: auto;
 
   width: 50%;
-  height: 35rem;
-  padding:20px;
+  height: 25rem;
+  padding-top:20px;
 }
 
 
 #film img {
-  width: 100%;
+  width: 70%;
   height:100%;
   object-fit: cover;
   border-radius: 100px;
@@ -82,7 +66,7 @@
 }
 
 #titolo {
-  font-size: 7rem;
+  font-size: 6rem;
   text-align: center;
   margin:5px;
 }
@@ -92,7 +76,7 @@
   border-radius: 100px;
   background-color: #75E6DA;
   border: 5px solid #05445E;
-  font-size: (1.7)*100%;
+  font-size: (1)*100%;
   width: 40em;
   margin:30px;
   padding: 50px;
@@ -116,6 +100,24 @@
 
 .testoIcone{
   color: #05445E;
-  font-size: (1.7)*100%;
+  font-size: (1)*100%;
+}
+
+#attori {
+  //position: fixed;
+  //bottom: 0;
+  justify-content: center;
+  margin-top: 5rem;
+  font-size: (1.2)*1rem;
+  color: #05445E;
+  border-radius: 100px;
+  background-color: #75E6DA;
+  border: 5px solid #05445E;
+  padding:30px;
+  width:40em;
+  margin:auto;
+
+
+
 }
 
