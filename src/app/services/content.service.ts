@@ -1,0 +1,15 @@
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ContentService {
+
+  constructor() { }
+
+  getCategoryContents$(){}
+  getAllContents$(){}
+  getContentsDetail$(){}
+  getFavouriteContents$(){}
+  getUnFiniscedContents$(){}
+}

@@ -15,5 +15,6 @@ export class HeaderComponent {
     {label:'Film',path:'catalogo/film'},
     {label:'Serie',path:'catalogo/serie'},
     {label:'Documentari',path:'catalogo/doc'},
-    {label:'Spettacoli',path:'catalogo/spet'}]
+    {label:'Spettacoli',path:'catalogo/spet'},
+    {label:'Preferiti',path:'list'}]
 }
