@@ -1,7 +1,6 @@
 <div class="search-input">
-  <input type="text"/>
+  <input type="text" (input)="printlog($event)"  />
   <button><img src="assets/search.png" alt="" width="20px" height="20px"></button>
 </div>
-<div class="search-result">
-sliderrrr
+<div class="search-result" [innerText]="valueDebounced$|async">
 </div>
