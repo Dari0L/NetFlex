@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { ContentService } from 'src/app/services/content.service';
+import { AfterViewInit, Component, Input, OnInit, inject } from '@angular/core';
 interface Movies {
   nome: string;
   url: string;
   description:string
 }
 import { film } from 'src/app/mocks/films';
+import { Observable } from 'rxjs';
 @Component({
   selector: 'app-slider',
   templateUrl: './slider.component.html',
@@ -13,11 +15,20 @@ import { film } from 'src/app/mocks/films';
 
 export class SliderComponent implements OnInit {
 
-movies=film.films
+  @Input() genere!:{id:number,nome:string};
+
+  @Input() category:string|null=null;
+
+  contentService=inject(ContentService);
+
+  movies=film.films
+
+  contenuti$?:Observable<any>;
 
   responsiveOptions: any[]=[];
 
   ngOnInit(): void {
+    this.contenuti$=this.contentService.getContenutiByGenere$(this.genere.id,this.category);
     this.responsiveOptions = [
       {
           breakpoint: '1199px',

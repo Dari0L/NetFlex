@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ContentService } from 'src/app/services/content.service';
 
 @Component({
   selector: 'app-home-page',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent {
+
+  private contentService = inject(ContentService);
+
+  generi$=this.contentService.getGeneri$();
+
 
 }

@@ -9,7 +9,7 @@ import { ContentService } from 'src/app/services/content.service';
 })
 export class SearchPageComponent  {
 
-  contentService=inject(ContentService);
+  private contentService=inject(ContentService);
   text$ = new Subject<string>();
   printlog(input: Event) {
     if (this.isEventAndInputEventWithTarget(input)) {
