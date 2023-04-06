@@ -11,7 +11,7 @@ export class ContentsPageComponent {
 
   private route=inject(ActivatedRoute);
 
-  contents$=this.route.params.pipe(
+  slug$=this.route.params.pipe(
     tap(console.log)
   ).subscribe();
 }

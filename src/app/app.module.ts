@@ -28,6 +28,7 @@ import { ContentsDetailPageComponent } from './pages/contents-detail-page/conten
     ContentsDetailPageComponent,
     HeaderComponent,
     SliderComponent,
+    DetailsFilmComponent,
 
   ],
   imports: [
