@@ -1,8 +1,61 @@
-<div class="wrapper">
+<div class="wrapper" *ngIf="(film$|async) as film;else noContent" >
 
-  <div id="film">
-    <img alt="immagine Film"
-      src="https://cdn.gelestatic.it/capital/sites/2/2023/03/film-mixed-by-erry-frattasio-intervista-chi-e-erry-sibilia-trailer-1024x535.jpg">
+  <div class="top">
+    <div class="copertina">
+      <img alt="immagine Film" [src]="film.url">
+    </div>
+    <div class="descrizione">
+      <h3 class="titolo">{{film.title}}</h3>
+      <div class="content">
+        {{film.description}}
+      </div>
+      <div class="attori">T. J. Thyne
+        T.J. Miller
+        Tadanobu Asano
+        Tadao Takashima
+        Tadashi Okuno
+        Tae Son Young
+        Tae-woong Eum
+        Tahar Rahim
+        Tahmoh Penikett
+        Tahnee Welch
+        Tahyna Tozzi
+        Tai Ling
+        Taichi Inoue
+        Taika Waititi
+        Tairo Caroli
+        Taissa Farmiga
+      </div>
+    </div>
+  </div>
+  <div class="bottom">
+    <div id="iconePulsanti">
+      <div>
+        <div class="preferiti">
+
+          <img class="icona" alt="immagine aggiungi ai preferiti" src="assets/addIcon.jpg">
+          <div class="testoIcone">Aggiungi ai preferiti</div>
+        </div>
+
+      </div>
+
+      <div id="recenzione">
+        recenzione
+      </div>
+
+    </div>
+    <div id="layoutDestro">
+      <div>serietv</div>
+      <div class="guardaFilm">
+
+        <img class="icona" alt="immagine aggiungi ai preferiti" src="assets/playIcon.png">
+        <div class="testoIcone">Play</div>
+      </div>
+    </div>
+  </div>
+<!--
+  <div id="copertina">
+    <img alt="immagine Film" [src]="film.url">
   </div>
   <div id="layoutComplessivo">
 
@@ -10,35 +63,45 @@
       <div id="boxContenuti">
 
         <div id="descrizione">
-          <div id="titolo">Titolo</div>
-          La basilica di San Zeno, conosciuta anche con il nome di chiesa di San Zeno Maggiore o chiesa di San Zenone, è
-          un importante luogo di culto cattolico che sorge nel cuore del quartiere di San Zeno a Verona; si tratta di uno
-          dei capolavori del romanico lombardo e quindi padano.
-
-          L'attuale chiesa venne realizzata sul luogo ove almeno altri cinque edifici religiosi erano stati edificati in
-          precedenza. Sembra che la sua origine sia da ricercarsi in una chiesa edificata sulla tomba di san Zeno di
-
-
-          Descrizione</div>
-
-        <div id="iconePulsanti">
-          <div>
-            <div class="guardaFilm">
-
-              <img class="icona" alt="immagine aggiungi ai preferiti" src="assets/addIcon.jpg">
-              <div class="testoIcone">Aggiungi ai preferiti</div>
-            </div>
-
+          <h3 id="titolo">{{film.title}}</h3>
+          <div class="content">
+            {{film.description}}
           </div>
 
-          <div id="recenzione">
-            recenzione
+        </div>
+        <div id="attori">T. J. Thyne
+          T.J. Miller
+          Tadanobu Asano
+          Tadao Takashima
+          Tadashi Okuno
+          Tae Son Young
+          Tae-woong Eum
+          Tahar Rahim
+          Tahmoh Penikett
+          Tahnee Welch
+          Tahyna Tozzi
+          Tai Ling
+          Taichi Inoue
+          Taika Waititi
+          Tairo Caroli
+          Taissa Farmiga
+        </div>
+      </div>
+      <div id="iconePulsanti">
+        <div>
+          <div class="preferiti">
+
+            <img class="icona" alt="immagine aggiungi ai preferiti" src="assets/addIcon.jpg">
+            <div class="testoIcone">Aggiungi ai preferiti</div>
           </div>
+
         </div>
 
+        <div id="recenzione">
+          recenzione
+        </div>
 
       </div>
-
     </div>
     <div id="layoutDestro">
       <div>serietv</div>
@@ -51,35 +114,6 @@
 
   </div>
 
-  <div id="attori">T. J. Thyne
-    T.J. Miller
-    Tadanobu Asano
-    Tadao Takashima
-    Tadashi Okuno
-    Tae Son Young
-    Tae-woong Eum
-    Tahar Rahim
-    Tahmoh Penikett
-    Tahnee Welch
-    Tahyna Tozzi
-    Tai Ling
-    Taichi Inoue
-    Taika Waititi
-    Tairo Caroli
-    Taissa Farmiga
-    Takamasa Ishihara
-    Takara Kogawa
-    Takashi Shimura
-    Takashi Yamazaki
-    Takashi Kogawa
-    Takayuki Yamada
-    Takayuki Hamatsu
-    Takeshi Kitano
-    Takeshi Kaneshiro
-    Talia Shire
-    Talisa Soto
-    Talitha Eliana Bateman
-    Tallulah Bankhead
-    Tamala Jones
-    Tamara Touman</div>
+-->
 </div>
+<ng-template #noContent>{{film$|async|json}}</ng-template>

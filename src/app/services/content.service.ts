@@ -41,6 +41,13 @@ export class ContentService {
       toArray()
     )
   }
+  getContenutoById$(id:number){
+    //if(id===0)return {};
+
+    return of(...this.mock).pipe(
+      filter((film)=>{return film.id==id}),
+      tap(console.log))
+  }
 
 
 }

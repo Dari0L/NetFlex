@@ -1,11 +1,14 @@
 <div class="wrapper">
   <div class="search-input">
-    <input type="text" placeholder="cerca" (input)="printlog($event)"  />
+    <input type="text" placeholder="cerca" (input)="printlog($event)" autofocus />
     <!--<button><img src="assets/search.png" alt="" width="20px" height="20px"></button>-->
   </div>
   <div class="search-result">
     <div class="item" *ngFor="let film of films$|async">
-      <img [src]="film.url" alt="copertinaFilm" width="30%" height="80%">
+      <a [routerLink]="'details/'+film.id">
+        <img [src]="film.url" alt="copertinaFilm" width="120rem" height="90rem">
+      </a>
+
       <div class="content">
         <h3>{{film.title}}</h3>
         <p>{{film.description}}</p>

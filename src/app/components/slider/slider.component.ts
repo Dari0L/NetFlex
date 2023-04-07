@@ -29,7 +29,7 @@ export class SliderComponent implements OnInit {
 
   ngOnInit(): void {
     this.contenuti$=this.contentService.getContenutiByGenere$(this.genere.id,this.category);
-
+    console.log(this.category)
     this.responsiveOptions = [
       {
           breakpoint: '1199px',

@@ -1,1 +1,7 @@
-<p>home-page works!</p>
+<div class="wrapper">
+  <ng-container *ngIf="generi$|async as generi">
+    <ng-container *ngFor="let genere of generi">
+      <app-slider [genere]="genere" ></app-slider>
+    </ng-container>
+  </ng-container>
+</div>

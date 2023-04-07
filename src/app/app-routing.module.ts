@@ -7,18 +7,47 @@ import { ContentsDetailPageComponent } from './pages/contents-detail-page/conten
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 
 const routes: Routes = [
-  {title: 'Home', path: '', component: HomePageComponent},
-  { path: 'catalogo', children:[
+  {title:'Home', path: '', children:[
+
+        {
+          path:'',component: HomePageComponent
+        },
+        {
+          title: 'dettagli', path:'details/:slug',component:ContentsDetailPageComponent
+        }
+  ]},
+  {title:'Catalogo', path: 'catalogo', children:[
     {
-      path:':slug',component:ContentsPageComponent
+      path:':slug',children:[
+        {
+          path:'',component:ContentsPageComponent
+        },
+        {
+          title: 'dettagli', path:'details/:slug',component:ContentsDetailPageComponent
+        },
+      ]
+    }
+  ]},
+  {title: 'My List', path: 'list', children:[
+
+    {
+      path:'',component: FavoritesPageComponent
     },
     {
-      path:':slug/details',component:ContentsDetailPageComponent
+      title: 'dettagli', path:'details/:slug',component:ContentsDetailPageComponent
     }
-
   ]},
-  {title: 'My List', path: 'list', component: FavoritesPageComponent},
-  {title: 'Search', path: 'search', component: SearchPageComponent}
+  {title: 'Search', path: 'search', children:[
+
+    {
+      path:'',component: SearchPageComponent
+    },
+    {
+      title: 'dettagli', path:'details/:slug',component:ContentsDetailPageComponent
+    }
+  ]},
+
+  //{title: 'Search', path: 'search', component: SearchPageComponent}
 ];
 
 @NgModule({

@@ -31,8 +31,6 @@ export class SearchPageComponent  {
       console.log(value);
     }),
     switchMap((value)=>(this.contentService.getContenutiByTitolo$(value))),
-
-
   );
 
 }

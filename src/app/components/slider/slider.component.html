@@ -9,7 +9,10 @@
       <div class="border-1 surface-border border-round m-2 text-center ">
 
         <div class="mb-3 hoverToShow">
-          <img src="{{movies.url}}" width="290px" [alt]="movies.title" class="w-6 shadow-2 " />
+          <a [routerLink]="'details/'+movies.id">
+            <img src="{{movies.url}}" width="290px" [alt]="movies.title" class="w-6 shadow-2 " />
+          </a>
+
         </div>
         <div class="row showDetails">
           <div class="col d-flex flex-row-reverse">

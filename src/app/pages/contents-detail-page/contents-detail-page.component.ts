@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { tap } from 'rxjs';
+import { ContentService } from 'src/app/services/content.service';
 
 @Component({
   selector: 'app-contents-detail-page',
@@ -7,4 +10,12 @@ import { Component } from '@angular/core';
 })
 export class ContentsDetailPageComponent {
 
+  private route=inject(ActivatedRoute);
+
+
+
+
+  slug$=this.route.params.pipe(
+    tap(console.log)
+  )
 }
