@@ -1,10 +1,13 @@
 
 <div class="wrapper">
+
 <div class="card">
+  <h3 class="generi">{{genere.nome}}</h3>
   <p-carousel [value]="movies" [numVisible]="3" [numScroll]="3" [circular]="false"
     [responsiveOptions]="responsiveOptions">
     <ng-template let-movies pTemplate="item">
       <div class="border-1 surface-border border-round m-2 text-center ">
+
         <div class="mb-3 hoverToShow">
           <img src="{{movies.url}}" width="290px" [alt]="movies.title" class="w-6 shadow-2 " />
         </div>

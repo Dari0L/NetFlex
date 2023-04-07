@@ -13,8 +13,13 @@ export class SearchPageComponent  {
   text$ = new Subject<string>();
   printlog(input: Event) {
     if (this.isEventAndInputEventWithTarget(input)) {
-      console.log(input.target.value);
-      this.text$.next(input.target.value);
+      const value=input.target.value;
+      console.log(value);
+      if(value.length>2){
+        this.text$.next(value);
+      }else{
+        this.text$.next(' ');
+      }
     }
   }
   isEventAndInputEventWithTarget(event: Event): event is (InputEvent & { target: HTMLInputElement }) {

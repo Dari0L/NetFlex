@@ -1,12 +1,13 @@
 .search-input{
   background-color: darkgray;
-  height: 5rem;
+  height: 8rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 1rem;
 
+  border-bottom: 2px solid gray;
 }
 input{
   height: 1.5rem;
@@ -20,9 +21,11 @@ input{
   border: 1px solid darkgray;
   background-color: rgb(6, 5, 45);
   color: white;
+  border-radius: 1rem;
+  margin-bottom: 0.5rem;
 }
 img{
-  margin: auto;
+  margin: 1rem;
 }
 .content{
   display: flex;
@@ -32,4 +35,10 @@ img{
 .search-result{
   background-color: darkgrey;
   min-height: 80vh;
+}
+.wrapper{
+  display: grid;
+  grid-template-rows: auto;
+  background-color: darkgrey;
+
 }

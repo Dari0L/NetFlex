@@ -6,20 +6,20 @@ export const film={
       id:'1234',
       title:'titol1',
       description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor iusto sequi quia eius blanditiis possimus eos, nobis ut deleniti nihil esse id necessitatibus doloribus quos, ipsa magni, quasi quo odit.',
-      url:'https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.mondoturf.net%2F2020%2F04%2Fcinema-ecco-i-20-film-2-sullippica-da.html&psig=AOvVaw1RuXGAetrVT9-V999vR56s&ust=1680703127891000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCODMxJuxkP4CFQAAAAAdAAAAABAD',
+      url:'assets/locandina.jpeg',
       genere:'genere'
     },
     {
       id:'1235',
       title:'titolo3',
       description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor iusto sequi quia eius blanditiis possimus eos, nobis ut deleniti nihil esse id necessitatibus doloribus quos, ipsa magni, quasi quo odit.',
-      url:'https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.mondoturf.net%2F2020%2F04%2Fcinema-ecco-i-20-film-2-sullippica-da.html&psig=AOvVaw1RuXGAetrVT9-V999vR56s&ust=1680703127891000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCODMxJuxkP4CFQAAAAAdAAAAABAD',
+      url:'https://www.artemedialab.it/wp-content/uploads/2019/04/immagini-sfondo-1-700x400.jpg',
       genere:'genere'
     },{
       id:'1236',
       title:'titolo4',
       description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor iusto sequi quia eius blanditiis possimus eos, nobis ut deleniti nihil esse id necessitatibus doloribus quos, ipsa magni, quasi quo odit.',
-      url:'https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.mondoturf.net%2F2020%2F04%2Fcinema-ecco-i-20-film-2-sullippica-da.html&psig=AOvVaw1RuXGAetrVT9-V999vR56s&ust=1680703127891000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCODMxJuxkP4CFQAAAAAdAAAAABAD',
+      url:'https://www.artemedialab.it/wp-content/uploads/2019/04/immagini-sfondo-1-700x400.jpg',
       genere:'genere'
     }
   ]

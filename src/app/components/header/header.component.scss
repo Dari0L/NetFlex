@@ -1,5 +1,5 @@
 .wrapper{
-  height: 3rem;
+  height: 4rem;
   display: grid;
   grid-template-columns: 10rem auto 4rem 4rem;
   gap: 1rem;
@@ -7,7 +7,9 @@
   background-color: darkslateblue;
 
 }
-
+.logo{
+  margin-left: 2rem;
+}
 nav{
   display: flex;
   flex-direction: row;
