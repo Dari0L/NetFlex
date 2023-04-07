@@ -25,11 +25,23 @@ export class SliderComponent implements OnInit {
 
   contenuti$?:Observable<any>;
 
+  addPreferito(id:number){
+
+    this.contentService.addPreferito(id);
+  }
+
   responsiveOptions: any[]=[];
 
   ngOnInit(): void {
-    this.contenuti$=this.contentService.getContenutiByGenere$(this.genere.id,this.category);
-    console.log(this.category)
+
+    if(this.genere.id!==0){
+      this.contenuti$=this.contentService.getContenutiByGenere$(this.genere.id,this.category);
+    }else{
+      //this.contenuti$=this.contentService.getPreferitiById$(1);
+      console.log('preferiti')
+
+    }
+
     this.responsiveOptions = [
       {
           breakpoint: '1199px',

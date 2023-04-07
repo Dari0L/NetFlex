@@ -18,8 +18,8 @@
   gap: 2rem;
   justify-content: space-between;
 }
-.copertina{
-
+h3{
+  font-size: 25px;
 }
 
 
@@ -82,7 +82,8 @@
   border-radius: 24px;
   background-color: #75E6DA;
   border: 5px solid #05445E;
-
+  display: grid;
+  gap:1rem;
   padding: 20px;
 }
 

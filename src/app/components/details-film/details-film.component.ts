@@ -15,11 +15,15 @@ export class DetailsFilmComponent implements OnInit{
 
   film$?:Observable<any>;
 
+  addPreferito(id:number){
+
+    this.contentService.addPreferito(id);
+    console.log('aggiunto')
+  }
+
   ngOnInit(): void {
     console.log(this.idContenuto.slug)
-    this.film$=this.contentService.getContenutoById$(this.idContenuto.slug).pipe(
-      tap(console.log)
-    )
+    this.film$=this.contentService.getContenutoById$(this.idContenuto.slug)
   }
 
 }

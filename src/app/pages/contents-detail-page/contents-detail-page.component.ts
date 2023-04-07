@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { tap } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 import { ContentService } from 'src/app/services/content.service';
 
 @Component({
@@ -17,5 +17,5 @@ export class ContentsDetailPageComponent {
 
   slug$=this.route.params.pipe(
     tap(console.log)
-  )
+  );
 }

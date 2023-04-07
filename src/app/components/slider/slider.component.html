@@ -1,9 +1,10 @@
 
 <div class="wrapper">
-
-<div class="card">
+<div *ngIf="contenuti$|async as contenuti">
+</div>
+<div class="card" >
   <h3 class="generi">{{genere.nome}}</h3>
-  <p-carousel [value]="movies" [numVisible]="3" [numScroll]="3" [circular]="false"
+  <p-carousel [value]="movies" [numVisible]="3" [numScroll]="3" [circular]="true"
     [responsiveOptions]="responsiveOptions">
     <ng-template let-movies pTemplate="item">
       <div class="border-1 surface-border border-round m-2 text-center ">
@@ -16,7 +17,7 @@
         </div>
         <div class="row showDetails">
           <div class="col d-flex flex-row-reverse">
-            <p-button type="button"  styleClass="p-button p-button-rounded" icon="pi pi-star"></p-button>
+            <p-button type="button" (onClick)="addPreferito(movies.id)" styleClass="p-button p-button-rounded" icon="pi pi-star"></p-button>
           </div>
           <div class="col-12 ">
             <h4 class="mb-1">{{ movies.title }}</h4>
